@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máy Cày Đất Minh Phát – Mua Bán & Cho Thuê Máy Cày Chuyên Nghiệp</title>
+  <meta name="description" content="Chuyên cung cấp máy cày đất chính hãng, dịch vụ cho thuê máy cày nông nghiệp giá tốt tại Việt Nam. Đội ngũ kỹ thuật chuyên nghiệp, bảo hành uy tín." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@400;600;700&family=Roboto+Slab:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-industrial" id="body">
+
+  <!-- ========== FLOATING THEME SWITCHER ========== -->
+  <div id="theme-switcher" class="theme-switcher">
+    <button id="switcher-toggle" class="switcher-toggle" aria-label="Đổi giao diện" title="Đổi giao diện">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+        <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+      </svg>
+      <span>Giao diện</span>
+    </button>
+    <div id="switcher-panel" class="switcher-panel" aria-hidden="true">
+      <div class="switcher-header">
+        <span>🎨 Chọn Giao Diện</span>
+      </div>
+      <div class="theme-options">
+        <button class="theme-btn active" data-theme="theme-industrial" id="btn-industrial">
+          <div class="theme-preview industrial-preview"></div>
+          <div class="theme-info">
+            <strong>Industrial</strong>
+            <small>Công nghiệp mạnh mẽ</small>
+          </div>
+        </button>
+        <button class="theme-btn" data-theme="theme-earth" id="btn-earth">
+          <div class="theme-preview earth-preview"></div>
+          <div class="theme-info">
+            <strong>Earth & Nature</strong>
+            <small>Thiên nhiên mộc mạc</small>
+          </div>
+        </button>
+        <button class="theme-btn" data-theme="theme-tech" id="btn-tech">
+          <div class="theme-preview tech-preview"></div>
+          <div class="theme-info">
+            <strong>Tech Modern</strong>
+            <small>Hiện đại công nghệ</small>
+          </div>
+        </button>
+        <button class="theme-btn" data-theme="theme-premium" id="btn-premium">
+          <div class="theme-preview premium-preview"></div>
+          <div class="theme-info">
+            <strong>Premium Gold</strong>
+            <small>Cao cấp sang trọng</small>
+          </div>
+        </button>
+        <button class="theme-btn" data-theme="theme-fresh" id="btn-fresh">
+          <div class="theme-preview fresh-preview"></div>
+          <div class="theme-info">
+            <strong>Fresh Green</strong>
+            <small>Tươi mát nông nghiệp</small>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo" id="logo-link">
+        <div class="logo-icon">🚜</div>
+        <div class="logo-text">
+          <span class="logo-brand">Minh Phát</span>
+          <span class="logo-tagline">Máy Cày Đất</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link">Trang Chủ</a>
+        <a href="#products" class="nav-link">Sản Phẩm</a>
+        <a href="#rental" class="nav-link">Cho Thuê</a>
+        <a href="#services" class="nav-link">Dịch Vụ</a>
+        <a href="#about" class="nav-link">Về Chúng Tôi</a>
+        <a href="#contact" class="nav-link">Liên Hệ</a>
+      </nav>
+      <a href="tel:0901234567" class="nav-cta" id="nav-cta-btn">
+        📞 0901 234 567
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/tractor_hero.png" alt="Máy cày đất chuyên nghiệp" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">🌾 Uy Tín – Chuyên Nghiệp – Giá Tốt</div>
+      <h1 class="hero-title">
+        Máy Cày Đất<br />
+        <span class="hero-title-accent">Minh Phát</span>
+      </h1>
+      <p class="hero-subtitle">
+        Chuyên cung cấp máy cày đất chính hãng & dịch vụ cho thuê máy nông nghiệp<br />
+        Phục vụ tận nơi – Bảo hành toàn quốc – Giá cạnh tranh nhất thị trường
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary" id="hero-buy-btn">🛒 Mua Máy Ngay</a>
+        <a href="#rental" class="btn btn-secondary" id="hero-rent-btn">📋 Thuê Máy Cày</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Máy đã bán</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Năm kinh nghiệm</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Khách hài lòng</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Hỗ trợ kỹ thuật</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== USP STRIP ========== -->
+  <section class="usp-strip" id="usp">
+    <div class="container usp-grid">
+      <div class="usp-item">
+        <div class="usp-icon">⚡</div>
+        <div class="usp-text">
+          <strong>Giao hàng nhanh</strong>
+          <span>Trong 24–48 giờ toàn quốc</span>
+        </div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🛡️</div>
+        <div class="usp-text">
+          <strong>Bảo hành 12 tháng</strong>
+          <span>Chính hãng, linh kiện chính gốc</span>
+        </div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🔧</div>
+        <div class="usp-text">
+          <strong>Kỹ thuật viên tận nơi</strong>
+          <span>Lắp đặt & hướng dẫn sử dụng miễn phí</span>
+        </div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">💰</div>
+        <div class="usp-text">
+          <strong>Giá cạnh tranh nhất</strong>
+          <span>Cam kết hoàn tiền nếu rẻ hơn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS FOR SALE ========== -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🛒 MUA BÁN</div>
+        <h2 class="section-title">Máy Cày Đất Bán Chạy</h2>
+        <p class="section-subtitle">Đa dạng chủng loại từ máy cày mini đến máy cày lớn – đáp ứng mọi nhu cầu canh tác</p>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card" id="product-card-1">
+          <div class="product-badge-wrapper">
+            <span class="badge badge-hot">🔥 Bán Chạy</span>
+          </div>
+          <div class="product-img-wrap">
+            <img src="images/tractor_product_1.png" alt="Máy cày mini đa năng" class="product-img" />
+            <div class="product-overlay">
+              <a href="#contact" class="btn btn-sm btn-primary">Liên hệ mua</a>
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-category">Máy Cày Mini</div>
+            <h3 class="product-name">Máy Cày Đất Mini Đa Năng MC-180</h3>
+            <div class="product-specs">
+              <span>⚙️ 7 mã lực</span>
+              <span>🌾 Cày sâu 25cm</span>
+              <span>⛽ Diesel</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">
+                <span class="price-current">32.500.000 ₫</span>
+                <span class="price-old">38.000.000 ₫</span>
+              </div>
+              <span class="product-discount">-15%</span>
+            </div>
+            <a href="#contact" class="btn btn-product" id="buy-product-1">Mua Ngay</a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" id="product-card-2">
+          <div class="product-badge-wrapper">
+            <span class="badge badge-new">✨ Mới Về</span>
+          </div>
+          <div class="product-img-wrap">
+            <img src="images/tractor_product_2.png" alt="Máy cày lớn 4 bánh" class="product-img" />
+            <div class="product-overlay">
+              <a href="#contact" class="btn btn-sm btn-primary">Liên hệ mua</a>
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-category">Máy Cày Lớn</div>
+            <h3 class="product-name">Máy Cày 4 Bánh Kubota L3408DT</h3>
+            <div class="product-specs">
+              <span>⚙️ 34 mã lực</span>
+              <span>🌾 Cày sâu 40cm</span>
+              <span>⛽ Diesel 4W</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">
+                <span class="price-current">285.000.000 ₫</span>
+                <span class="price-old">310.000.000 ₫</span>
+              </div>
+              <span class="product-discount">-8%</span>
+            </div>
+            <a href="#contact" class="btn btn-product" id="buy-product-2">Mua Ngay</a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" id="product-card-3">
+          <div class="product-badge-wrapper">
+            <span class="badge badge-sale">💸 Giảm Giá</span>
+          </div>
+          <div class="product-img-wrap">
+            <img src="images/tractor_product_3.png" alt="Máy cày tay 2 bánh" class="product-img" />
+            <div class="product-overlay">
+              <a href="#contact" class="btn btn-sm btn-primary">Liên hệ mua</a>
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-category">Máy Cày Tay</div>
+            <h3 class="product-name">Máy Cày Tay 2 Bánh Đa Chức Năng CT-90</h3>
+            <div class="product-specs">
+              <span>⚙️ 9 mã lực</span>
+              <span>🌾 Cày sâu 20cm</span>
+              <span>⛽ Xăng / Diesel</span>
+            </div>
+            <div class="product-price-row">
+              <div class="product-price">
+                <span class="price-current">18.900.000 ₫</span>
+                <span class="price-old">22.500.000 ₫</span>
+              </div>
+              <span class="product-discount">-16%</span>
+            </div>
+            <a href="#contact" class="btn btn-product" id="buy-product-3">Mua Ngay</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#contact" class="btn btn-outline-primary" id="view-all-products">Xem Tất Cả Sản Phẩm →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RENTAL SERVICE ========== -->
+  <section class="section rental-section" id="rental">
+    <div class="container">
+      <div class="rental-layout">
+        <div class="rental-image-col">
+          <div class="rental-img-wrap">
+            <img src="images/tractor_rental_service.png" alt="Dịch vụ cho thuê máy cày đất" class="rental-img" />
+            <div class="rental-img-badge">
+              <span class="rental-price-tag">Từ <strong>500.000 ₫</strong>/ngày</span>
+            </div>
+          </div>
+        </div>
+        <div class="rental-content-col">
+          <div class="section-badge">📋 CHO THUÊ</div>
+          <h2 class="section-title">Dịch Vụ Cho Thuê<br /><span class="accent">Máy Cày Đất</span></h2>
+          <p class="rental-desc">
+            Không cần đầu tư lớn – chỉ cần thuê máy theo ngày hoặc theo vụ. Đội ngũ lái máy chuyên nghiệp phục vụ tận ruộng, đảm bảo canh tác nhanh chóng và hiệu quả.
+          </p>
+          <div class="rental-features">
+            <div class="rental-feature">
+              <div class="feature-icon">📅</div>
+              <div class="feature-text">
+                <strong>Thuê theo ngày / tuần / vụ</strong>
+                <span>Linh hoạt thời gian, phù hợp mọi nhu cầu</span>
+              </div>
+            </div>
+            <div class="rental-feature">
+              <div class="feature-icon">👨‍🌾</div>
+              <div class="feature-text">
+                <strong>Có lái máy kèm theo</strong>
+                <span>Thợ lái dày dạn kinh nghiệm, làm việc chuyên nghiệp</span>
+              </div>
+            </div>
+            <div class="rental-feature">
+              <div class="feature-icon">📍</div>
+              <div class="feature-text">
+                <strong>Phục vụ tận nơi</strong>
+                <span>Di chuyển đến ruộng của bạn, không phí chờ đợi</span>
+              </div>
+            </div>
+            <div class="rental-feature">
+              <div class="feature-icon">💵</div>
+              <div class="feature-text">
+                <strong>Giá thuê cạnh tranh</strong>
+                <span>Từ 500.000₫/ngày – tiết kiệm hơn mua mới</span>
+              </div>
+            </div>
+          </div>
+          <div class="rental-actions">
+            <a href="#contact" class="btn btn-primary" id="rental-contact-btn">📞 Đặt Thuê Ngay</a>
+            <a href="tel:0901234567" class="btn btn-ghost" id="rental-call-btn">Gọi Ngay: 0901 234 567</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING / RENTAL RATES ========== -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">💰 BẢNG GIÁ</div>
+        <h2 class="section-title">Bảng Giá Cho Thuê Máy Cày</h2>
+        <p class="section-subtitle">Giá thuê rõ ràng, minh bạch – không phát sinh chi phí ẩn</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card" id="price-card-1">
+          <div class="pricing-icon">🌱</div>
+          <h3 class="pricing-name">Máy Cày Mini</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">₫</span>
+            <span class="pricing-number">500.000</span>
+            <span class="pricing-period">/ngày</span>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ Máy cày tay hoặc mini 4 bánh</li>
+            <li>✅ Phù hợp ruộng nhỏ &lt; 1 ha</li>
+            <li>✅ Bao gồm nhiên liệu</li>
+            <li>✅ Có thợ lái kèm theo</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-primary" id="price-mini-btn">Đặt Thuê</a>
+        </div>
+        <div class="pricing-card pricing-featured" id="price-card-2">
+          <div class="pricing-popular-badge">⭐ Phổ Biến Nhất</div>
+          <div class="pricing-icon">🚜</div>
+          <h3 class="pricing-name">Máy Cày Vừa</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">₫</span>
+            <span class="pricing-number">800.000</span>
+            <span class="pricing-period">/ngày</span>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ Máy cày 20–30 mã lực</li>
+            <li>✅ Phù hợp ruộng 1–5 ha</li>
+            <li>✅ Bao gồm nhiên liệu & thợ lái</li>
+            <li>✅ Ưu tiên lịch, đặt trước 1 ngày</li>
+            <li>✅ Hỗ trợ khẩn cấp 24/7</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" id="price-medium-btn">Đặt Thuê Ngay</a>
+        </div>
+        <div class="pricing-card" id="price-card-3">
+          <div class="pricing-icon">🏗️</div>
+          <h3 class="pricing-name">Máy Cày Lớn</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">₫</span>
+            <span class="pricing-number">1.200.000</span>
+            <span class="pricing-period">/ngày</span>
+          </div>
+          <ul class="pricing-features">
+            <li>✅ Máy cày 34–55 mã lực</li>
+            <li>✅ Phù hợp đất lớn &gt; 5 ha</li>
+            <li>✅ Bao gồm nhiên liệu & thợ lái</li>
+            <li>✅ Thiết bị chuyên dụng cao cấp</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-primary" id="price-large-btn">Đặt Thuê</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY US ========== -->
+  <section class="section whyus-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🏆 TẠI SAO CHỌN CHÚNG TÔI</div>
+        <h2 class="section-title">Cam Kết Của Minh Phát</h2>
+        <p class="section-subtitle">Chúng tôi không chỉ bán máy – chúng tôi đồng hành cùng bà con nông dân</p>
+      </div>
+      <div class="whyus-grid">
+        <div class="whyus-card" id="why-1">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">🏭</span>
+          </div>
+          <h3>Hàng Chính Hãng</h3>
+          <p>Độc quyền phân phối từ các thương hiệu lớn: Kubota, Yanmar, ISEKI, máy Trung Quốc chất lượng cao.</p>
+        </div>
+        <div class="whyus-card" id="why-2">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">🔩</span>
+          </div>
+          <h3>Phụ Tùng Đầy Đủ</h3>
+          <p>Kho phụ tùng hàng nghìn chi tiết, sẵn sàng thay thế ngay trong ngày khi cần sửa chữa.</p>
+        </div>
+        <div class="whyus-card" id="why-3">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">📍</span>
+          </div>
+          <h3>Phủ Sóng Toàn Quốc</h3>
+          <p>Mạng lưới kỹ thuật viên tại 30+ tỉnh thành. Hỗ trợ tại chỗ trong vòng 4 giờ.</p>
+        </div>
+        <div class="whyus-card" id="why-4">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">💳</span>
+          </div>
+          <h3>Hỗ Trợ Trả Góp</h3>
+          <p>Hỗ trợ vay vốn ngân hàng, trả góp 0% lãi suất 12 tháng cho đơn hàng trên 50 triệu đồng.</p>
+        </div>
+        <div class="whyus-card" id="why-5">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">🎓</span>
+          </div>
+          <h3>Đào Tạo Vận Hành</h3>
+          <p>Đào tạo miễn phí cách vận hành máy, bảo dưỡng định kỳ và xử lý sự cố thường gặp.</p>
+        </div>
+        <div class="whyus-card" id="why-6">
+          <div class="whyus-icon-wrap">
+            <span class="whyus-icon">📞</span>
+          </div>
+          <h3>Hỗ Trợ 24/7</h3>
+          <p>Hotline kỹ thuật hoạt động xuyên suốt, giải đáp mọi câu hỏi và xử lý sự cố khẩn cấp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">💬 ĐÁNH GIÁ</div>
+        <h2 class="section-title">Bà Con Nói Gì Về Chúng Tôi?</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" id="testimonial-1">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Mua máy cày MC-180 được 2 năm, dùng ngon lắm. Máy bền, ít hư hỏng. Khi cần sửa thì điện thoại là có người xuống liền. Rất hài lòng!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨‍🌾</div>
+            <div class="testimonial-meta">
+              <strong>Anh Nguyễn Văn Hùng</strong>
+              <span>Nông dân – Đồng Tháp</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-2">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Thuê máy cày theo vụ tiết kiệm hơn hẳn. Thợ lái làm nhanh lắm, một ngày xong 3 công. Giá hợp lý, sẽ thuê dài dài."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍🌾</div>
+            <div class="testimonial-meta">
+              <strong>Chị Trần Thị Lan</strong>
+              <span>Chủ trại – An Giang</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-3">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Máy Kubota L3408 mua ở đây chính hãng, giá tốt hơn chỗ khác 5 triệu. Được tặng thêm bộ phụ tùng dự phòng. Dịch vụ chuyên nghiệp!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨‍🌾</div>
+            <div class="testimonial-meta">
+              <strong>Bác Lê Văn Tám</strong>
+              <span>Chủ trang trại – Cần Thơ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-content">
+          <div class="section-badge">🌿 VỀ CHÚNG TÔI</div>
+          <h2 class="section-title">Hơn <span class="accent">10 Năm</span> Đồng Hành Cùng Bà Con Nông Dân</h2>
+          <p>Công ty TNHH Minh Phát được thành lập năm 2014, chuyên cung cấp máy móc nông nghiệp chất lượng cao và dịch vụ cho thuê máy cày đất. Chúng tôi tự hào là đối tác tin cậy của hàng nghìn hộ gia đình và doanh nghiệp nông nghiệp trên khắp vùng đồng bằng sông Cửu Long.</p>
+          <p>Với triết lý "<em>Phục vụ tận tâm – Chất lượng hàng đầu</em>", Minh Phát không ngừng mở rộng danh mục sản phẩm và nâng cao chất lượng dịch vụ để mang đến sự hài lòng tối đa cho khách hàng.</p>
+          <div class="about-milestones">
+            <div class="milestone">
+              <span class="milestone-year">2014</span>
+              <span class="milestone-label">Thành lập công ty</span>
+            </div>
+            <div class="milestone">
+              <span class="milestone-year">2018</span>
+              <span class="milestone-label">Mở chi nhánh thứ 3</span>
+            </div>
+            <div class="milestone">
+              <span class="milestone-year">2022</span>
+              <span class="milestone-label">Đại lý Kubota chính thức</span>
+            </div>
+            <div class="milestone">
+              <span class="milestone-year">2024</span>
+              <span class="milestone-label">500+ máy đã bán</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats-col">
+          <div class="about-stat-card">
+            <div class="stat-big-num">500+</div>
+            <div class="stat-big-label">Máy Đã Bán Ra</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="stat-big-num">30+</div>
+            <div class="stat-big-label">Tỉnh Thành Phục Vụ</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="stat-big-num">1.200+</div>
+            <div class="stat-big-label">Khách Hàng Tin Tưởng</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="stat-big-num">98%</div>
+            <div class="stat-big-label">Tỷ Lệ Hài Lòng</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📬 LIÊN HỆ</div>
+        <h2 class="section-title">Tư Vấn Miễn Phí</h2>
+        <p class="section-subtitle">Điền thông tin bên dưới – chúng tôi sẽ gọi lại trong vòng 30 phút</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-form-col">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Họ và tên *</label>
+                <input type="text" id="contact-name" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Số điện thoại *</label>
+                <input type="tel" id="contact-phone" placeholder="0901 234 567" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-need">Nhu cầu của bạn</label>
+              <select id="contact-need">
+                <option value="">-- Chọn nhu cầu --</option>
+                <option value="buy">Mua máy cày đất</option>
+                <option value="rent">Thuê máy cày đất</option>
+                <option value="repair">Sửa chữa / bảo dưỡng</option>
+                <option value="parts">Mua phụ tùng</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Tin nhắn thêm</label>
+              <textarea id="contact-message" rows="4" placeholder="Mô tả thêm nhu cầu của bạn..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit-btn">
+              🚀 Gửi Yêu Cầu Tư Vấn
+            </button>
+          </form>
+        </div>
+        <div class="contact-info-col">
+          <div class="contact-info-card">
+            <h3>Thông Tin Liên Hệ</h3>
+            <div class="contact-detail">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Địa chỉ</strong>
+                <p>123 Đường Nông Nghiệp, Phường 5, TP. Cần Thơ</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Hotline</strong>
+                <p><a href="tel:0901234567">0901 234 567</a> (24/7)</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:info@minhphatmayco.vn">info@minhphatmayco.vn</a></p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>Giờ làm việc</strong>
+                <p>Thứ 2 – Thứ 7: 7:00 – 18:00<br />Chủ nhật: 8:00 – 12:00</p>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="#" class="social-btn" id="social-facebook">📘 Facebook</a>
+              <a href="#" class="social-btn" id="social-zalo">💬 Zalo</a>
+              <a href="#" class="social-btn" id="social-youtube">▶️ YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🚜</div>
+          <div class="logo-text">
+            <span class="logo-brand">Minh Phát</span>
+            <span class="logo-tagline">Máy Cày Đất</span>
+          </div>
+        </div>
+        <p class="footer-desc">Chuyên cung cấp máy cày đất chính hãng và dịch vụ cho thuê máy nông nghiệp uy tín. Đồng hành cùng bà con nông dân Việt Nam.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sản Phẩm</h4>
+        <a href="#products">Máy cày mini</a>
+        <a href="#products">Máy cày 4 bánh</a>
+        <a href="#products">Máy cày tay</a>
+        <a href="#products">Phụ tùng thay thế</a>
+      </div>
+      <div class="footer-links">
+        <h4>Dịch Vụ</h4>
+        <a href="#rental">Cho thuê máy cày</a>
+        <a href="#services">Sửa chữa bảo dưỡng</a>
+        <a href="#services">Lắp đặt tại nhà</a>
+        <a href="#services">Đào tạo vận hành</a>
+      </div>
+      <div class="footer-links">
+        <h4>Liên Hệ</h4>
+        <a href="tel:0901234567">📞 0901 234 567</a>
+        <a href="mailto:info@minhphatmayco.vn">📧 info@minhphatmayco.vn</a>
+        <a href="#">📘 Facebook Minh Phát</a>
+        <a href="#">📍 Bản đồ đường đến</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Công ty TNHH Minh Phát. Thiết kế bởi <strong>Minh Phát Tech</strong>. | ĐKKD: 1234567890</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Lên đầu trang">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
