@@ -1068,45 +1068,161 @@ ul { list-style: none; }
    THEME-SPECIFIC OVERRIDES
    ===================================================== */
 
-/* TECH theme: glassmorphism cards */
-.theme-tech .product-card,
-.theme-tech .whyus-card,
-.theme-tech .testimonial-card,
-.theme-tech .pricing-card,
-.theme-tech .about-stat-card,
-.theme-tech .contact-info-card {
+/* =====================================================
+   THEME 1: INDUSTRIAL (Default)
+   Layout: Standard grid structure, left-aligned text
+   ===================================================== */
+.theme-industrial .section-title { position: relative; }
+.theme-industrial .section-badge { border-radius: 0; letter-spacing: 0.12em; }
+
+
+/* =====================================================
+   THEME 2: EARTH & NATURE
+   Layout: Centered Hero Card, 2x2 USP, 2-col Products, Reversed Rental
+   ===================================================== */
+/* Hero center card */
+.theme-earth .hero-content {
+  background: rgba(250, 247, 242, 0.90);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  padding: 56px 40px;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(124, 92, 46, 0.15);
+  border: 1px solid rgba(124, 92, 46, 0.2);
+  margin-top: 40px;
+}
+.theme-earth .hero-title, .theme-earth .hero-subtitle { color: var(--color-text); text-shadow: none; }
+.theme-earth .hero-title-accent { text-shadow: none; color: var(--color-primary); }
+.theme-earth .hero-stats { background: rgba(124, 92, 46, 0.08); border-color: rgba(124, 92, 46, 0.2); }
+.theme-earth .stat-number { color: var(--color-primary); }
+.theme-earth .stat-label { color: var(--color-muted); }
+.theme-earth .stat-divider { background: rgba(124, 92, 46, 0.2); }
+.theme-earth .hero-badge { background: rgba(124, 92, 46, 0.1); border-color: rgba(124, 92, 46, 0.2); color: var(--color-primary); }
+
+/* USP 2x2 grid */
+@media (min-width: 769px) {
+  .theme-earth .usp-grid { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; gap: 20px; }
+  .theme-earth .usp-item { border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 12px; }
 }
 
-/* TECH theme: glowing borders */
-.theme-tech .product-card:hover { box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-lg); }
+/* Products: 2 columns */
+@media (min-width: 769px) {
+  .theme-earth .products-grid { grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto; }
+}
 
-/* TECH theme: neon text effects */
+/* Style overrides */
+.theme-earth .product-card { box-shadow: 0 2px 12px rgba(124,92,46,0.08); }
+.theme-earth .product-card:hover { box-shadow: 0 12px 40px rgba(124,92,46,0.2); }
+.theme-earth .whyus-card { box-shadow: 0 2px 12px rgba(124,92,46,0.06); }
+
+/* Rental: Reverse layout */
+@media (min-width: 901px) {
+  .theme-earth .rental-layout { direction: rtl; }
+  .theme-earth .rental-layout > * { direction: ltr; }
+}
+
+/* About Layout: Stacked vertically */
+.theme-earth .about-layout { display: flex; flex-direction: column; text-align: center; }
+.theme-earth .about-content .section-title { text-align: center; }
+.theme-earth .about-milestones { justify-content: center; }
+
+
+/* =====================================================
+   THEME 3: TECH MODERN
+   Layout: Split Hero, Horizontal Pricing Cards
+   ===================================================== */
+/* Glassmorphism & Neon Shadows */
+.theme-tech .product-card, .theme-tech .whyus-card, .theme-tech .testimonial-card,
+.theme-tech .pricing-card, .theme-tech .about-stat-card, .theme-tech .contact-info-card {
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.04);
+}
+.theme-tech .product-card:hover { box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-lg); }
+.theme-tech .whyus-card:hover { box-shadow: 0 0 20px rgba(0,200,255,0.08); }
 .theme-tech .hero-title-accent { text-shadow: 0 0 30px var(--color-primary); }
 .theme-tech .logo-brand { text-shadow: 0 0 12px rgba(0,200,255,0.5); }
 
-/* PREMIUM theme: gold separator lines in sections */
+/* Split Hero Layout */
+@media (min-width: 901px) {
+  .theme-tech .hero-bg { width: 45%; left: 55%; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); }
+  .theme-tech .hero-overlay { background: transparent; }
+  .theme-tech .hero::before { content: ""; position: absolute; inset: 0; background: var(--bg-primary); z-index: -1; }
+  .theme-tech .hero-content { margin: 0; text-align: left; max-width: 50%; padding-right: 40px; }
+  .theme-tech .hero-actions { justify-content: flex-start; }
+}
+
+/* Horizontal Pricing Cards */
+@media (min-width: 1025px) {
+  .theme-tech .pricing-grid { grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 20px; }
+  .theme-tech .pricing-card { display: flex; align-items: center; text-align: left; padding: 24px 36px; gap: 40px; }
+  .theme-tech .pricing-card.pricing-featured { transform: scale(1.02); }
+  .theme-tech .pricing-card.pricing-featured:hover { transform: scale(1.04) translateY(-2px); }
+  .theme-tech .pricing-popular-badge { top: auto; left: 0; transform: none; border-radius: 0 10px 10px 0; }
+  .theme-tech .pricing-icon { margin-bottom: 0; font-size: 2.5rem; }
+  .theme-tech .pricing-name { margin-bottom: 0; min-width: 150px; }
+  .theme-tech .pricing-amount { margin-bottom: 0; }
+  .theme-tech .pricing-features { margin-bottom: 0; flex-direction: row; flex: 1; justify-content: center; flex-wrap: wrap; }
+  .theme-tech .pricing-features li { white-space: nowrap; }
+}
+
+
+/* =====================================================
+   THEME 4: PREMIUM GOLD
+   Layout: Zig-zag Products Grid, Stacked Testimonials
+   ===================================================== */
+/* Styling tweaks */
 .theme-premium .usp-strip { border-top: 1px solid rgba(201,162,39,0.3); border-bottom: 1px solid rgba(201,162,39,0.3); }
 .theme-premium .section-badge { letter-spacing: 0.15em; }
 .theme-premium .pricing-number, .theme-premium .pricing-currency { text-shadow: 0 2px 8px rgba(201,162,39,0.4); }
 .theme-premium .whyus-card::before { height: 2px; background: linear-gradient(90deg, transparent, #c9a227, transparent); }
 .theme-premium .hero-title-accent { text-shadow: 0 0 20px rgba(201,162,39,0.5); }
 
-/* INDUSTRIAL theme: grid line background on section title */
-.theme-industrial .section-title { position: relative; }
-.theme-industrial .section-badge { border-radius: 0; letter-spacing: 0.12em; }
+/* Zig-zag Products Grid */
+@media (min-width: 769px) {
+  .theme-premium .products-grid { grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 40px; }
+  .theme-premium .product-card { display: flex; align-items: stretch; text-align: left; padding: 0; }
+  .theme-premium .product-card:nth-child(even) { flex-direction: row-reverse; }
+  .theme-premium .product-img-wrap { width: 45%; }
+  .theme-premium .product-body { width: 55%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+  .theme-premium .product-badge-wrapper { top: 20px; left: 20px; }
+  .theme-premium .product-card:nth-child(even) .product-badge-wrapper { left: auto; right: 20px; }
+}
 
-/* EARTH theme: soft shadows */
-.theme-earth .product-card { box-shadow: 0 2px 12px rgba(124,92,46,0.08); }
-.theme-earth .product-card:hover { box-shadow: 0 12px 40px rgba(124,92,46,0.2); }
-.theme-earth .whyus-card { box-shadow: 0 2px 12px rgba(124,92,46,0.06); }
+/* 1 Column Testimonials */
+@media (min-width: 769px) {
+  .theme-premium .testimonials-grid { grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; }
+  .theme-premium .testimonial-card { text-align: center; display: flex; flex-direction: column; align-items: center; }
+}
 
-/* FRESH theme: bright green accents */
+
+/* =====================================================
+   THEME 5: FRESH GREEN
+   Layout: Floating USP over Hero, Featured Why-Us First Card
+   ===================================================== */
+/* Styling tweaks */
 .theme-fresh .hero-title-accent { text-shadow: 0 2px 12px rgba(22,163,74,0.4); }
 .theme-fresh .section-badge { background: linear-gradient(90deg, #16a34a, #84cc16); }
-.theme-fresh .usp-strip { background: linear-gradient(90deg, #15803d, #16a34a); }
+.theme-fresh .usp-strip { background: linear-gradient(90deg, #15803d, #16a34a); padding: 0; border: none; }
 .theme-fresh .product-card:hover { border-color: #84cc16; box-shadow: 0 8px 30px rgba(22,163,74,0.15); }
+
+/* Floating USP Over Hero */
+@media (min-width: 1025px) {
+  .theme-fresh .hero { padding-bottom: 80px; }
+  .theme-fresh .usp-strip { position: relative; margin-top: -60px; z-index: 10; background: transparent; }
+  .theme-fresh .usp-grid { background: linear-gradient(90deg, #15803d, #16a34a); border-radius: 20px; box-shadow: var(--shadow-lg); overflow: hidden; }
+}
+
+/* Why-Us: First item large */
+@media (min-width: 901px) {
+  .theme-fresh .whyus-grid { grid-template-columns: repeat(2, 1fr); }
+  .theme-fresh .whyus-card:first-child { grid-column: span 2; display: flex; align-items: center; gap: 40px; }
+  .theme-fresh .whyus-card:first-child .whyus-icon-wrap { margin-bottom: 0; font-size: 4rem; }
+}
+
+/* Pricing Layout Change: 2 columns top, 1 bottom */
+@media (min-width: 901px) {
+  .theme-fresh .pricing-grid { grid-template-columns: repeat(2, 1fr); justify-content: center; }
+  .theme-fresh .pricing-card:nth-child(3) { grid-column: span 2; max-width: 50%; justify-self: center; }
+}
 
 /* =====================================================
    RESPONSIVE – MOBILE
